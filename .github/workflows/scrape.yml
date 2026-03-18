@@ -1,0 +1,40 @@
+name: ANEF Scraper Bot 🤖
+
+on:
+  schedule:
+    # Lancement tous les jours à 8h00 et 20h00 (Heure UTC, donc 9h et 21h en France)
+    - cron: '0 8,20 * * *'
+  workflow_dispatch: # Permet de lancer un run manuel depuis l'interface GitHub !
+
+jobs:
+  scrape-and-push:
+    runs-on: ubuntu-latest
+    
+    # Très important pour éviter que deux instances tournent en même temps et bloquent le compte
+    concurrency:
+      group: scraper-bot
+      cancel-in-progress: true
+
+    steps:
+      - name: 📥 Cloner le code de l'application
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20' # NodeJS récent
+          cache: 'npm'
+          cache-dependency-path: './backend/package-lock.json'
+
+      - name: 📦 Installer les dépendances (Backend)
+        working-directory: ./backend
+        run: npm ci
+
+      - name: 🤖 Lancer le Robot Firebase
+        working-directory: ./backend
+        env:
+          ANEF_ID: ${{ secrets.ANEF_ID }}
+          ANEF_PASSWORD: ${{ secrets.ANEF_PASSWORD }}
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        # L'exécutable local inclus par Puppeteer suffit normalement grâces aux args --no-sandbox
+        run: node bot.js

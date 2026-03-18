@@ -1,0 +1,15 @@
+{
+  "name": "anef-monitor",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "local": "node local.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
+    "express": "^4.21.0",
+    "firebase-admin": "^13.7.0",
+    "puppeteer": "^24.39.1"
+  }
+}

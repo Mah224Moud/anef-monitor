@@ -1,0 +1,625 @@
+
+
+❯ npm start
+
+> anef-monitor@1.0.0 start
+> node local.js
+
+🚀 Démarrage...
+
+🌐 Ouverture page de connexion SSO...
+🔐 Saisie des identifiants...
+
+📡 Capturé : https://administration-etrangers-en-france.interieur.gouv.fr/api/notifications/non-lu?per_page=3&page=1
+{
+  "_items": [],
+  "_meta": {
+    "page": 1,
+    "per_page": 3,
+    "total": 0
+  },
+  "_links": {
+    "self": "/notifications?per_page=3&page=1"
+  }
+}
+
+📡 Capturé : https://administration-etrangers-en-france.interieur.gouv.fr/api/usager/moi?is_by_nature_titre=true
+{
+  "usager": {
+    "nom": "",
+    "prenoms": [
+      ""
+    ],
+    "sexe": "M",
+    "date_naissance": "1997-08-16T00:00:00+00:00",
+    "date_naissance_approximative": false,
+    "pays_naissance": {
+      "code": "",
+      "libelle": ""
+    },
+    "ville_naissance": "",
+    "nationalites": [
+      {
+        "code": "",
+        "libelle": "guinéenne (rép. de guinée)"
+      }
+    ],
+    "situation_familiale": "",
+    "fprnsis_resultat": false,
+    "fprnsis_resultat_date_consultation": "",
+    "photo": {
+      "id": "",
+      "_links": {
+        "self": "",
+        "data": "",
+        "name": ""
+      }
+    },
+    "adresse": {
+      "numero_voie": "2",
+      "voie": "",
+      "code_insee": "",
+      "code_postal": "",
+      "ville": ""
+    },
+    "telephone": "",
+    "email": "",
+    "identifiant_agdref": "",
+    "date_entree_en_france": "",
+    "id": "",
+    "change_password_next_login": false
+  },
+  "statut_actuel": {
+    "date_debut_validite": "",
+    "date_fin_validite": "",
+    "motif_delivrance": "",
+    "titre": "",
+    "duration": "X ans y mois",
+    "nature_titre": "CSP",
+    "num_reference_reglementaire": "",
+    "motif_reference_reglementaire": "",
+    "variables_titre": "{'mobilite':False}",
+    "mention_reference_reglementaire": "",
+    "code_formulaire_renouvellement": "",
+    "is_reference_reglementaire_actif": true,
+    "is_conjoint": false
+  },
+  "statut_specifique": {},
+  "blocking": {
+    "tse_expire_tve_instruction": false,
+    "should_be_blocked": false
+  },
+  "agdref_type_document": "CSP",
+  "date_entree_france": "AnneMoisJour",
+  "identite_parents": [],
+  "has_demande_nat_with_children_en_cours": false,
+  "dossier_en_cours": {
+    "has_dossier_en_cours": false,
+    "id_dossier_en_cours": null
+  },
+  "demande_nat_en_cours": {
+    "has_demande_nat_en_cours": false,
+    "has_demande_nat_with_children_en_cours": false,
+    "id_dossier_en_cours": null
+  },
+  "is_know_by_sejour_for_cds": true
+}
+
+📡 Capturé : https://administration-etrangers-en-france.interieur.gouv.fr/api/notifications/non-lu?per_page=3&page=1
+{
+  "_items": [],
+  "_meta": {
+    "page": 1,
+    "per_page": 3,
+    "total": 0
+  },
+  "_links": {
+    "self": "/notifications?per_page=3&page=1"
+  }
+}
+✅ Connecté !
+📂 Navigation vers mon-compte...
+
+📡 Capturé : https://administration-etrangers-en-france.interieur.gouv.fr/api/notifications/non-lu?per_page=3&page=1
+{
+  "_items": [],
+  "_meta": {
+    "page": 1,
+    "per_page": 3,
+    "total": 0
+  },
+  "_links": {
+    "self": "/notifications?per_page=3&page=1"
+  }
+}
+
+📡 Capturé : https://administration-etrangers-en-france.interieur.gouv.fr/api/notifications?per_page=3&page=1
+{
+  "_items": [
+    {
+      "id": "",
+      "_version": 2,
+      "_created": "",
+      "_updated": "",
+      "date_lecture": "",
+      "id_usager": ,
+      "type_notification": "",
+      "motif_notification": "",
+      "lu": true,
+      "id_demande": 
+    },
+    {
+      "id": "",
+      "_version": 2,
+      "_created": "",
+      "_updated": "",
+      "date_lecture": "",
+      "id_usager": ,
+      "type_notification": "",
+      "motif_notification": "",
+      "lu": true,
+      "id_demande": 
+    },
+    {
+      "id": "",
+      "_version": 3,
+      "_created": "",
+      "_updated": "",
+      "date_lecture": "",
+      "date_reponse": "",
+      "id_usager": ,
+      "type_notification": "",
+      "motif_notification": "",
+      "lu": true,
+      "id_demande": 
+    }
+  ],
+  "_meta": {
+    "page": 1,
+    "per_page": 3,
+    "total": 13
+  },
+  "_links": {
+    "self": "/notifications?per_page=3&page=1",
+    "next": "/notifications?per_page=3&page=2"
+  }
+}
+
+📡 Capturé : https://administration-etrangers-en-france.interieur.gouv.fr/api/usager/moi?is_by_nature_titre=true
+{
+  "usager": {
+    "nom": "",
+    "prenoms": [
+      ""
+    ],
+    "sexe": "M",
+    "date_naissance": "",
+    "date_naissance_approximative": false,
+    "pays_naissance": {
+      "code": "",
+      "libelle": ""
+    },
+    "ville_naissance": "",
+    "nationalites": [
+      {
+        "code": "",
+        "libelle": ""
+      }
+    ],
+    "situation_familiale": "",
+    "fprnsis_resultat": false,
+    "fprnsis_resultat_date_consultation": "",
+    "photo": {
+      "id": "",
+      "_links": {
+        "self": "",
+        "data": "",
+        "name": ""
+      }
+    },
+    "adresse": {
+      "numero_voie": "",
+      "voie": "",
+      "code_insee": "",
+      "code_postal": "",
+      "ville": ""
+    },
+    "telephone": "",
+    "email": "",
+    "identifiant_agdref": "",
+    "date_entree_en_france": "",
+    "id": "",
+    "change_password_next_login": false
+  },
+  "statut_actuel": {
+    "date_debut_validite": "",
+    "date_fin_validite": "",
+    "motif_delivrance": "",
+    "titre": "",
+    "duration": "",
+    "nature_titre": "CSP",
+    "num_reference_reglementaire": "",
+    "motif_reference_reglementaire": "",
+    "variables_titre": "{'mobilite':False}",
+    "mention_reference_reglementaire": "",
+    "code_formulaire_renouvellement": "",
+    "is_reference_reglementaire_actif": true,
+    "is_conjoint": false
+  },
+  "statut_specifique": {},
+  "blocking": {
+    "tse_expire_tve_instruction": false,
+    "should_be_blocked": false
+  },
+  "agdref_type_document": "CSP",
+  "date_entree_france": "",
+  "identite_parents": [],
+  "has_demande_nat_with_children_en_cours": false,
+  "dossier_en_cours": {
+    "has_dossier_en_cours": false,
+    "id_dossier_en_cours": null
+  },
+  "demande_nat_en_cours": {
+    "has_demande_nat_en_cours": false,
+    "has_demande_nat_with_children_en_cours": false,
+    "id_dossier_en_cours": null
+  },
+  "is_know_by_sejour_for_cds": true
+}
+
+📡 Capturé : https://administration-etrangers-en-france.interieur.gouv.fr/api/sejour/historique-droit-sejour
+{
+  "droits": [
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "VLS-TS",
+      "numero": null,
+      "date_delivrance": null,
+      "nature_titre": null,
+      "demande_origine": {
+        "id": 80021,
+        "_cls": ""
+      }
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": "002",
+      "date_delivrance": "",
+      "nature_titre": "CSP",
+      "demande_origine": null
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": null,
+      "date_delivrance": null,
+      "nature_titre": null,
+      "demande_origine": {
+        "id": ,
+        "_cls": ""
+      }
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": null,
+      "date_delivrance": null,
+      "nature_titre": "CST",
+      "demande_origine": {
+        "id": 1510541,
+        "_cls": ""
+      }
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": null,
+      "date_delivrance": null,
+      "nature_titre": "CSP",
+      "demande_origine": {
+        "id": 4308245,
+        "_cls": ""
+      }
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": "004",
+      "date_delivrance": "",
+      "nature_titre": "CSP",
+      "demande_origine": null
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": null,
+      "date_delivrance": null,
+      "nature_titre": null,
+      "demande_origine": {
+        "id": 9568398,
+        "_cls": ""
+      }
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": null,
+      "date_delivrance": null,
+      "nature_titre": "CSP",
+      "demande_origine": {
+        "id": 9568398,
+        "_cls": ""
+      }
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": "005",
+      "date_delivrance": "",
+      "nature_titre": "CSP",
+      "demande_origine": null
+    }
+  ]
+}
+
+📡 Capturé : https://administration-etrangers-en-france.interieur.gouv.fr/api/notifications/non-lu?per_page=3&page=1
+{
+  "_items": [],
+  "_meta": {
+    "page": 1,
+    "per_page": 3,
+    "total": 0
+  },
+  "_links": {
+    "self": "/notifications?per_page=3&page=1"
+  }
+}
+
+📡 Capturé : https://administration-etrangers-en-france.interieur.gouv.fr/api/notifications/non-lu?per_page=3&page=1
+{
+  "_items": [],
+  "_meta": {
+    "page": 1,
+    "per_page": 3,
+    "total": 0
+  },
+  "_links": {
+    "self": "/notifications?per_page=3&page=1"
+  }
+}
+
+═══════════════════════════════
+📊 3/4 URL(s) capturée(s)
+═══════════════════════════════
+
+✅ /api/notifications
+{
+  "_items": [],
+  "_meta": {
+    "page": 1,
+    "per_page": 3,
+    "total": 0
+  },
+  "_links": {
+    "self": "/notifications?per_page=3&page=1"
+  }
+}
+
+✅ /api/usager/moi
+{
+  "usager": {
+    "nom": "-",
+    "prenoms": [
+      ""
+    ],
+    "sexe": "M",
+    "date_naissance": "",
+    "date_naissance_approximative": false,
+    "pays_naissance": {
+      "code": "GIN",
+      "libelle": ""
+    },
+    "ville_naissance": "",
+    "nationalites": [
+      {
+        "code": "GIN",
+        "libelle": "guinéenne (rép. de guinée)"
+      }
+    ],
+    "situation_familiale": "",
+    "fprnsis_resultat": false,
+    "fprnsis_resultat_date_consultation": "",
+    "photo": {
+      "id": "",
+      "_links": {
+        "self": "",
+        "data": "",
+        "name": ""
+      }
+    },
+    "adresse": {
+      "numero_voie": "2",
+      "voie": "",
+      "code_insee": "",
+      "code_postal": "",
+      "ville": ""
+    },
+    "telephone": "",
+    "email": "",
+    "identifiant_agdref": "",
+    "date_entree_en_france": "",
+    "id": "",
+    "change_password_next_login": false
+  },
+  "statut_actuel": {
+    "date_debut_validite": "",
+    "date_fin_validite": "",
+    "motif_delivrance": "",
+    "titre": "",
+    "duration": "X ans y mois",
+    "nature_titre": "CSP",
+    "num_reference_reglementaire": "",
+    "motif_reference_reglementaire": "",
+    "variables_titre": "{'mobilite':False}",
+    "mention_reference_reglementaire": "",
+    "code_formulaire_renouvellement": "",
+    "is_reference_reglementaire_actif": true,
+    "is_conjoint": false
+  },
+  "statut_specifique": {},
+  "blocking": {
+    "tse_expire_tve_instruction": false,
+    "should_be_blocked": false
+  },
+  "agdref_type_document": "CSP",
+  "date_entree_france": "",
+  "identite_parents": [],
+  "has_demande_nat_with_children_en_cours": false,
+  "dossier_en_cours": {
+    "has_dossier_en_cours": false,
+    "id_dossier_en_cours": null
+  },
+  "demande_nat_en_cours": {
+    "has_demande_nat_en_cours": false,
+    "has_demande_nat_with_children_en_cours": false,
+    "id_dossier_en_cours": null
+  },
+  "is_know_by_sejour_for_cds": true
+}
+
+✅ /api/sejour/historique-droit-sejour
+{
+  "droits": [
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "VLS-TS",
+      "numero": null,
+      "date_delivrance": null,
+      "nature_titre": null,
+      "demande_origine": {
+        "id": 80021,
+        "_cls": ""
+      }
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": "002",
+      "date_delivrance": "",
+      "nature_titre": "CSP",
+      "demande_origine": null
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": null,
+      "date_delivrance": null,
+      "nature_titre": null,
+      "demande_origine": {
+        "id": 1510541,
+        "_cls": ""
+      }
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": null,
+      "date_delivrance": null,
+      "nature_titre": "CST",
+      "demande_origine": {
+        "id": 1510541,
+        "_cls": ""
+      }
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": null,
+      "date_delivrance": null,
+      "nature_titre": "CSP",
+      "demande_origine": {
+        "id": 4308245,
+        "_cls": ""
+      }
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": "",
+      "date_delivrance": "",
+      "nature_titre": "CSP",
+      "demande_origine": null
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": null,
+      "date_delivrance": null,
+      "nature_titre": null,
+      "demande_origine": {
+        "id": ,
+        "_cls": ""
+      }
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": null,
+      "date_delivrance": null,
+      "nature_titre": "CSP",
+      "demande_origine": {
+        "id": ,
+        "_cls": ""
+      }
+    },
+    {
+      "date_debut_validite": "",
+      "date_fin_validite": "",
+      "motif_delivrance": "",
+      "nature": "",
+      "numero": "",
+      "date_delivrance": "",
+      "nature_titre": "CSP",
+      "demande_origine": null
+    }
+  ]
+}
+
+🔍 Navigateur ouvert — ferme-le manuellement.
+
+✅ Terminé. undefined requête(s) capturée(s).
