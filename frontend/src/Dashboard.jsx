@@ -3,6 +3,7 @@ import { Spinner } from "flowbite-react";
 import { HiShieldCheck } from "react-icons/hi";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "./firebase";
+import { getRelativeTime } from "./utils/formatDate";
 import StatutCard from "./components/StatutCard";
 import DemandeSejourCard from "./components/DemandeSejourCard";
 import Notifications from "./components/Notifications";
@@ -18,19 +19,19 @@ const Dashboard = () => {
   useEffect(() => {
     // Écoute en temps réel du document 'latest' dans la collection 'anef_data'
     const docRef = doc(db, "anef_data", "latest");
-    
+
     console.log("Connexion à Firebase en cours...");
-    
+
     const unsubscribe = onSnapshot(docRef, (docSnap) => {
       if (docSnap.exists()) {
         const firestoreData = docSnap.data();
         setData(firestoreData);
-        
+
         let updateTime = new Date();
         if (firestoreData.last_updated && firestoreData.last_updated.toDate) {
           updateTime = firestoreData.last_updated.toDate();
         }
-        
+
         setLastRefresh(updateTime);
         setError(null);
       } else {
@@ -49,11 +50,11 @@ const Dashboard = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors">
-        <div className="text-center">
-          <Spinner size="lg" />
-          <p className="mt-4 text-sm font-medium text-slate-500 dark:text-slate-400">Connexion à la base de données en direct…</p>
-        </div>
+      <div className="fixed inset-0 flex flex-col items-center justify-center bg-slate-50 dark:bg-slate-900 transition-colors z-[9999] p-6 text-center">
+        <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-6"></div>
+        <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 animate-pulse tracking-wide uppercase">
+          Vérification en cours…
+        </p>
       </div>
     );
   }
@@ -119,12 +120,12 @@ const Dashboard = () => {
             </div>
           </div>
           {lastRefresh && (
-            <div className="flex items-center gap-2 text-xs font-medium bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400 px-3 py-1.5 rounded-full border border-emerald-200 dark:border-emerald-800/50 shadow-sm self-start sm:self-auto transition-colors">
+            <div className="flex items-center gap-2 text-xs font-semibold bg-emerald-50 dark:bg-emerald-900/10 text-emerald-700 dark:text-emerald-400 px-3 py-1.5 rounded-full border border-emerald-100 dark:border-emerald-800/30 shadow-sm self-start sm:self-auto transition-colors">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              Synchronisé en direct ⚡️ ({lastRefresh.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })})
+              Mis à jour {getRelativeTime(lastRefresh)} ({lastRefresh.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })})
             </div>
           )}
         </div>
@@ -147,10 +148,10 @@ const Dashboard = () => {
         </div>
       </main>
 
-      <footer className="border-t border-slate-200 dark:border-slate-800 py-6 transition-colors mt-auto">
+      <footer className="mt-12 border-t border-slate-100 dark:border-slate-800 py-10 transition-colors bg-white/30 dark:bg-slate-900/30">
         <div className="container-app text-center">
-          <p className="text-xs text-slate-400 dark:text-slate-500">
-            ANEF Monitor — Interface Firebase Serverless en Temps Réel
+          <p className="text-xs text-slate-400 dark:text-slate-500 font-medium tracking-widest uppercase">
+            ANEF MONITOR • DONNÉES SYNCHRONISÉES DEPUIS LE PORTAIL OFFICIEL
           </p>
         </div>
       </footer>
