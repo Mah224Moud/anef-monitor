@@ -26,7 +26,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={() => setIsDark(!isDark)}
-      className="p-2 text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 dark:bg-slate-800 bg-slate-100 dark:hover:bg-slate-700 hover:bg-slate-200 focus:outline-none transition-all rounded-full shadow-sm"
+      className="p-2 text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 dark:bg-slate-800 bg-slate-100 dark:hover:bg-slate-700 hover:bg-slate-200 focus:outline-none transition-all rounded-full shadow-sm cursor-pointer"
       aria-label="Toggle Dark Mode"
       title={isDark ? "Passer au thème clair" : "Passer au thème sombre"}
     >

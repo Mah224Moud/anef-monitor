@@ -36,7 +36,7 @@ async function runScraper() {
   }
 
   try {
-    console.log("🚀 Démarrage du robot de scraping ANEF...");
+    console.log("Démarrage du robot de scraping ANEF...");
     const rawData = await checkANEF(id, password);
     
     // Structuration propre du JSON
@@ -49,14 +49,14 @@ async function runScraper() {
       last_updated: admin.firestore.FieldValue.serverTimestamp() // Timestamp Firebase natif
     };
     
-    console.log("🔥 Enregistrement dans Firebase (collection: anef_data, document: latest)...");
+    console.log("Enregistrement dans Firebase (collection: anef_data, document: latest)...");
     await db.collection("anef_data").doc("latest").set(result);
     
-    console.log("✅ Mise à jour réussie avec succès !");
+    console.log("Mise à jour réussie avec succès !");
     process.exit(0);
     
   } catch (error) {
-    console.error("❌ Erreur durant le scraping :", error);
+    console.error("Erreur durant le scraping :", error);
     process.exit(1);
   }
 }

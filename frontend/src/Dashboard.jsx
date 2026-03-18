@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Spinner } from "flowbite-react";
-import { HiShieldCheck } from "react-icons/hi";
+import { HiShieldCheck, HiOutlineLogout } from "react-icons/hi";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "./firebase";
 import { getRelativeTime } from "./utils/formatDate";
@@ -10,7 +10,7 @@ import Notifications from "./components/Notifications";
 import Historique from "./components/Historique";
 import ThemeToggle from "./components/ThemeToggle";
 
-const Dashboard = () => {
+const Dashboard = ({ onLogout }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -86,7 +86,7 @@ const Dashboard = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <ThemeToggle />
+            <ThemeToggle className="cursor-pointer" />
 
             <div className="flex items-center gap-2 pl-4 border-l border-slate-200 dark:border-slate-700">
               <div className="w-8 h-8 bg-slate-900 dark:bg-slate-800 text-white rounded-full flex items-center justify-center text-xs font-bold shadow-sm ring-1 ring-slate-200/50 dark:ring-slate-700">
@@ -94,6 +94,14 @@ const Dashboard = () => {
               </div>
               <span className="hidden sm:block text-sm font-medium text-slate-700 dark:text-slate-300">{displayName}</span>
             </div>
+
+            <button
+              onClick={onLogout}
+              className="p-2 text-slate-500 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors cursor-pointer"
+              title="Déconnexion"
+            >
+              <HiOutlineLogout className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </nav>
