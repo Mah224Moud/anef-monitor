@@ -1,15 +1,15 @@
 name: ANEF Scraper Bot 🤖
 
 on:
-  schedule:
-    # Lancement tous les jours à 8h00 et 20h00 (Heure UTC, donc 9h et 21h en France)
-    - cron: '0 8,20 * * *'
+  #schedule:
+  # Lancement tous les jours à 8h00 et 20h00 (Heure UTC, donc 9h et 21h en France)
+  #  - cron: '0 8,20 * * *'
   workflow_dispatch: # Permet de lancer un run manuel depuis l'interface GitHub !
 
 jobs:
   scrape-and-push:
     runs-on: ubuntu-latest
-    
+
     # Très important pour éviter que deux instances tournent en même temps et bloquent le compte
     concurrency:
       group: scraper-bot
@@ -22,9 +22,9 @@ jobs:
       - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '24' # NodeJS récent
-          cache: 'npm'
-          cache-dependency-path: './backend/package-lock.json'
+          node-version: "24" # NodeJS récent
+          cache: "npm"
+          cache-dependency-path: "./backend/package-lock.json"
 
       - name: 📦 Installer les dépendances (Backend)
         working-directory: ./backend
